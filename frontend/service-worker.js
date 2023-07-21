@@ -6,10 +6,8 @@ const filesToCache = [
   '/',
   '/main.html',
   '/main/utits/index.js',
+  '/main/utits/style.css',
   '/main/assets/favicon.png',
-  '/path/to/other/assets/asset1.jpg',
-  '/path/to/other/assets/asset2.css',
-  // Add more paths to other assets you want to cache
 ];
 
 // Install event - cache files when the service worker is installed
