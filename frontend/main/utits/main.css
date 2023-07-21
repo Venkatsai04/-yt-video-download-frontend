@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Ubuntu:wght@300&display=swap');
+
+body {
+    background: linear-gradient(45deg, red, blue, rgb(184, 48, 230), darkblue);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.8;
+    /* Firefox */
+}
+
+/* Your existing styles here */
+
+/* Add styles for the side navigation menu */
+.side-nav {
+    position: fixed;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #f2f2f2;
+    transform: translateX(1000%);
+    /* Initially hidden off the screen */
+    transition: transform 0.3s ease-in-out;
+}
+
+.side-nav.active {
+    transform: translateX(0);
+    /* Show the side navigation menu on active */
+    backdrop-filter: blur(5px);
+    background: rgba(225, 225, 225, 0.5);
+}
+
+.side-nav-links {
+    list-style: none;
+    padding: 20px;
+}
+
+.side-nav-links li {
+    padding: 10px 0;
+}
+
+.side-nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    display: block;
+}
+
+/* Add styles for the toggle button bars */
+.toggle-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+/* Add media query for mobile-friendly layout */
+@media (max-width: 768px) {
+    .nav-links {
+        display: block;
+    }
+
+    .toggle .dropdown-menu {
+        position: static;
+        display: none;
+    }
+
+    .toggle.active .dropdown-menu {
+        display: block;
+    }
+
+    /* Hide the side navigation menu on mobile */
+    .side-nav {
+        display: none;
+    }
+
+    /* Show the side navigation menu on mobile when toggle button is clicked */
+    .side-nav.active {
+        display: block;
+    }
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 2px 2px rgba(255, 255, 255, 0.2);
+    margin: 20px 0px;
+}
+
+header .logo {
+    font-size: 18px;
+    padding: 0pc 18px;
+    color: white;
+    font-weight: bolder;
+    font-family: 'IM Fell French Canon SC', serif;
+
+}
+
+header .logo span {
+    color: red;
+}
+
+header .logo span:last-child {
+    color: black;
+    font-size: 25px;
+}
+
+header nav {
+    margin-top: 5px;
+}
+
+header nav ul {
+    display: flex;
+    padding: 0px 20px;
+    gap: 10px;
+    list-style: none;
+    margin-right: 35px;
+    width: 110px;
+}
+
+
+header nav ul li .toggle {
+    width: 20px;
+    height: 2px;
+    background: white;
+}
+
+header nav ul li .toggle::before {
+    content: "";
+    display: block;
+    position: relative;
+    top: 7px;
+    width: 20px;
+    height: 2px;
+    background: white;
+}
+
+header nav ul li .toggle::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 11px;
+    width: 20px;
+    height: 2px;
+    background: white;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 6px;
+    border-radius: 20px;
+}
+
+header nav ul li a:hover {
+    background-color: black;
+}
+
+main {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+
+main .text {
+    font-size: 40px;
+    margin-top: 55px;
+}
+
+main .text span:nth-of-type(odd) {
+    color: red;
+}
+
+main .text span:nth-of-type(even) {
+    color: white;
+}
+
+.input input {
+    width: 250px;
+    height: 30px;
+    margin-top: 30px;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 25px;
+    background: transparent;
+    padding: 5px 15px;
+    font-size: 16px;
+    color: white;
+    backdrop-filter: blur(5px);
+}
+
+
+.btn button {
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    padding: 10px;
+    font-family: Gill Sans, "Gill Sans", sans-serif;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    margin: 3em;
+    border: solid 2px #232323;
+    color: white;
+    border-radius: 0.4em;
+    transition: all 0.3s linear;
+    animation-iteration-count: infinite;
+    animation-duration: 0.75s;
+    animation-name: jump;
+    background-color: red;
+    z-index: -1
+}
+
+.btn button:hover {
+    color: #ffffff;
+    background: #232323;
+    animation: none;
+}
+
+@keyframes jump {
+    0% {
+        transform: scale(1, 1) translate(0px, 0px);
+    }
+
+    30% {
+        transform: scale(1, 0.8) translate(0px, 10px);
+    }
+
+    75% {
+        transform: scale(1, 1.1) translate(0px, -15px);
+    }
+
+    100% {
+        transform: scale(1, 1) translate(0px, 0px);
+    }
+
+}
+
+section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    color: black;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.error {
+    margin: 5px;
+    font-size: 15px;
+    color: red;
+}
+
+
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 30px 20px 30px;
+    color: black;
+    border-radius: 20PX;
+    background: rgba(225,225,225,0.2);
+    border: 1px solid #e5e5e5;
+  }
+  
+  .footer > * {
+    flex:  1 100%;
+  }
+  
+  .footer__addr {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+  }
+  
+  .footer__logo {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-size: 1.5rem;
+  }
+  
+  .footer__addr h2 {
+    margin-top: 1.3em;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .nav__title {
+    font-weight: 800;
+    font-size: 15px;
+  }
+  
+  .footer address {
+    font-style: normal;
+    color: #999;
+  }
+  
+  .footer__btn {
+    border: none;
+    margin: 16px -12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    max-width: max-content;
+    background-color: rgb(33, 33, 33, 0.07);
+    border-radius: 100px;
+    color: #2f2f2f;
+    line-height: 0;
+ 
+    font-size: 1rem;
+    padding: 0 1.3em;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .footer li {
+    line-height: 2em;
+  }
+  
+  .footer a {
+    text-decoration: none;
+  }
+  
+  .footer__nav {
+    display: flex;
+      flex-flow: row wrap;
+  }
+  
+  .footer__nav > * {
+    flex: 1 50%;
+    margin-right: 1.25em;
+  }
+  
+  .nav__ul a {
+    color: #222;
+  }
+  
+  .nav__ul--extra {
+    column-count: 2;
+    column-gap: 1.25em;
+  }
+  
+  .legal {
+    display: flex;
+    flex-wrap: wrap;
+    color: #999;
+  }
+    
+  .legal__links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .heart {
+    color: #2f2f2f;
+  }
+  
+  @media screen and (min-width: 24.375em) {
+    .legal .legal__links {
+      margin-left: auto;
+    }
+  }
+  
+  @media screen and (min-width: 40.375em) {
+    .footer__nav > * {
+      flex: 1;
+    }
+    
+    .nav__item--extra {
+      flex-grow: 2;
+    }
+    
+    .footer__addr {
+      flex: 1 0px;
+    }
+    
+    .footer__nav {
+      flex: 2 0px;
+    }
+  }
