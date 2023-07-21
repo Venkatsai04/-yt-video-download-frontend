@@ -82,6 +82,7 @@ body {
     /* Show the side navigation menu on mobile when toggle button is clicked */
     .side-nav.active {
         display: block;
+        z-index: 100000
     }
 }
 
