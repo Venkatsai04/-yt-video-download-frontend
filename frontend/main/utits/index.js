@@ -70,7 +70,7 @@ async function downloadVideo() {
             });
 
             if (response.ok) {
-                document.querySelector(".error").innerHTML = "Be Patient 😁 <br> <p style="font-size: 10px">Download time depends on length of video</p>"
+                document.querySelector(".error").innerHTML = `Be Patient 😁 <br> <p style="font-size: 10px">Download time depends on length of video</p>`
                 document.querySelector(".error").style.color = "white"
                 videoUrl.value = ""
                 const blob = await response.blob();
