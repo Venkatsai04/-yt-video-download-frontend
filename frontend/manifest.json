@@ -1,10 +1,10 @@
 {
   "name": "YT Downloader",
   "short_name": "YT Downloader Free",
-  "start_url": "/main.html",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "linear-gradient(45deg, red, blue, rgb(184, 48, 230), darkblue)",
-  "theme_color": "linear-gradient(45deg, red, blue, rgb(184, 48, 230), darkblue)",
+  "background_color": "#FF0000",
+  "theme_color": "#FF0000",
   "icons": [
     {
       "src": "main/assets/favicon.png",
