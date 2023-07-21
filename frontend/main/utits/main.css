@@ -221,7 +221,7 @@ main .text span:nth-of-type(even) {
     animation-duration: 0.75s;
     animation-name: jump;
     background-color: red;
-    z-index: -1
+  
 }
 
 .btn button:hover {
