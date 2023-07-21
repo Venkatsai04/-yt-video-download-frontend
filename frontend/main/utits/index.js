@@ -57,7 +57,7 @@ async function downloadVideo() {
 
     var videoUrl = document.querySelector("input");
     if (videoUrl.value) {
-        document.querySelector(".error").innerText = "Downloading..."
+        document.querySelector(".error").innerText = "Downloading 😀..."
         document.querySelector(".error").style.color = "white"
         try {
 
@@ -70,7 +70,7 @@ async function downloadVideo() {
             });
 
             if (response.ok) {
-                document.querySelector(".error").innerText = "Downloaded"
+                document.querySelector(".error").innerText = "Be Patient 😁"
                 document.querySelector(".error").style.color = "white"
                 videoUrl.value = ""
                 const blob = await response.blob();
